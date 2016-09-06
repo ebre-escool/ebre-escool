@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5df55db5df350e49c36261e10e13618f",
-    "content-hash": "5d7cdf88aee509ea4b3d9e4f2e68f005",
+    "hash": "75c0fa39d63c9d685f13791483cae9d4",
+    "content-hash": "498b48865cd9e6c8ca7670f873bc9690",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -381,6 +381,65 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
+        },
+        {
+            "name": "ebre-escool/settings",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "/home/sergi/Code/ebre-escool/ebre-escool-settings",
+                "reference": "8cf522b5380fea72acbb0f84cd5b4aa20326e7ee",
+                "shasum": null
+            },
+            "require": {
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ebre-escool\\settings\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "ebre-escool\\settings\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ],
+                "format": [
+                    "phpcbf --standard=psr2 src/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "https://github.com/ebre-escool/settings",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Settings module for school apps",
+            "homepage": "https://github.com/ebre-escool/settings",
+            "keywords": [
+                "ebre-escool",
+                "settings"
+            ]
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -3763,7 +3822,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "ebre-escool/settings": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
