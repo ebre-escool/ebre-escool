@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "75c0fa39d63c9d685f13791483cae9d4",
-    "content-hash": "498b48865cd9e6c8ca7670f873bc9690",
+    "hash": "45cdf866e56a2c4f4b5665b3ea469d6c",
+    "content-hash": "54a04a53c85904c7f0c6d8155b9b1f10",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -58,6 +58,67 @@
                 "theme"
             ],
             "time": "2016-09-05 09:30:23"
+        },
+        {
+            "name": "acacha/profile",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "/home/sergi/Code/acacha/profile",
+                "reference": "fad52242b41e51544cb66bbfae8f19fb12121798",
+                "shasum": null
+            },
+            "require": {
+                "illuminate/console": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Acacha\\Profile\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Acacha\\Profile\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ],
+                "format": [
+                    "phpcbf --standard=psr2 src/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "https://github.com/acacha",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel package that provides basic user profile support",
+            "homepage": "https://github.com/acacha/profile",
+            "keywords": [
+                "acacha",
+                "profile"
+            ]
         },
         {
             "name": "barryvdh/laravel-debugbar",
@@ -388,10 +449,11 @@
             "dist": {
                 "type": "path",
                 "url": "/home/sergi/Code/ebre-escool/ebre-escool-settings",
-                "reference": "8cf522b5380fea72acbb0f84cd5b4aa20326e7ee",
+                "reference": "83be4fa9bb4aee50319f99a574d813b18ed2eedd",
                 "shasum": null
             },
             "require": {
+                "acacha/profile": "dev-master",
                 "php": "~5.6|~7.0"
             },
             "require-dev": {
@@ -407,12 +469,12 @@
             },
             "autoload": {
                 "psr-4": {
-                    "ebre-escool\\settings\\": "src"
+                    "Escool\\Settings\\": "src"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "ebre-escool\\settings\\": "tests"
+                    "Escool\\Settings\\": "tests"
                 }
             },
             "scripts": {
@@ -588,16 +650,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.3.6",
+            "version": "v5.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c63a7fb7066fea2bce91ace5c830c01d503abe6c"
+                "reference": "99c74afc0b99e1af1984cb55dc242ab28a0e496b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c63a7fb7066fea2bce91ace5c830c01d503abe6c",
-                "reference": "c63a7fb7066fea2bce91ace5c830c01d503abe6c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/99c74afc0b99e1af1984cb55dc242ab28a0e496b",
+                "reference": "99c74afc0b99e1af1984cb55dc242ab28a0e496b",
                 "shasum": ""
             },
             "require": {
@@ -711,7 +773,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-09-01 14:06:47"
+            "time": "2016-09-09 16:33:59"
         },
         {
             "name": "league/flysystem",
@@ -2469,16 +2531,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "a8773992b362b58498eed24bf85005f363c34771"
+                "reference": "da8529775f14f4fdae33f916eb0cf65f6afbddbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/a8773992b362b58498eed24bf85005f363c34771",
-                "reference": "a8773992b362b58498eed24bf85005f363c34771",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/da8529775f14f4fdae33f916eb0cf65f6afbddbc",
+                "reference": "da8529775f14f4fdae33f916eb0cf65f6afbddbc",
                 "shasum": ""
             },
             "require": {
@@ -2507,7 +2569,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2015-11-20 12:04:31"
+            "time": "2016-09-06 16:07:05"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -3041,16 +3103,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.2.6",
+            "version": "3.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49"
+                "reference": "546898a2c0c356ef2891b39dd7d07f5d82c8ed0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49",
-                "reference": "46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/546898a2c0c356ef2891b39dd7d07f5d82c8ed0a",
+                "reference": "546898a2c0c356ef2891b39dd7d07f5d82c8ed0a",
                 "shasum": ""
             },
             "require": {
@@ -3096,7 +3158,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-08-26 05:51:59"
+            "time": "2016-09-06 16:07:45"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -3823,7 +3885,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "ebre-escool/settings": 20
+        "ebre-escool/settings": 20,
+        "acacha/profile": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

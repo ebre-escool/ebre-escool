@@ -10,7 +10,8 @@
         "acacha/admin-lte-template-laravel": "^3.0",
         "barryvdh/laravel-ide-helper": "^2.2",
         "barryvdh/laravel-debugbar": "^2.2",
-        "ebre-escool/settings": "dev-master"
+        "ebre-escool/settings": "dev-master",
+        "acacha/profile": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
