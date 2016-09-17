@@ -183,6 +183,15 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Acacha Llum Service Providers...
+         *
+         * See: https://github.com/acacha/llum
+         */
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        #llum_providers
+
     ],
 
     /*
@@ -237,6 +246,16 @@ return [
          */
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        #llum_aliases
+
+        /*
+         * Acacha Llum Aliases...
+         *
+         * See: https://github.com/acacha/llum
+         */
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         #llum_aliases
