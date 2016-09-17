@@ -14,7 +14,7 @@
                 <div class="box-body box-profile">
                     <img class=z"profile-user-img img-responsive img-circle" src="../../dist/img/user4-128x128.jpg" alt="User profile picture">
 
-                    <h3 class="profile-username text-center">Pepita Palotes</h3>
+                    <h3 class="profile-username text-center">Pepita Palotes AAA</h3>
 
                     <p class="text-muted text-center">Software Engineer</p>
 
@@ -81,7 +81,7 @@
         <div class="col-md-9">
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#activity" data-toggle="tab" aria-expanded="true">Activity</a></li>
+                    <li class="active"><a href="#activity" data-toggle="tab" aria-expanded="true">Settings</a></li>
                     <li class=""><a href="#timeline" data-toggle="tab" aria-expanded="false">Timeline</a></li>
                     <li class=""><a href="#settings" data-toggle="tab" aria-expanded="false">Settings</a></li>
                 </ul>

@@ -4,24 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "45cdf866e56a2c4f4b5665b3ea469d6c",
-    "content-hash": "54a04a53c85904c7f0c6d8155b9b1f10",
+    "hash": "153a30ee10686ac7db0dd6a1037f0c14",
+    "content-hash": "aa31980796ab543120c5afeb80b91b7c",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
-            "version": "3.0.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acacha/adminlte-laravel.git",
-                "reference": "90ca103eb4e6eea92ee5175f010800496182398c"
+                "reference": "d544c06b06c6044abe42d756a1c37e345cea79ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/90ca103eb4e6eea92ee5175f010800496182398c",
-                "reference": "90ca103eb4e6eea92ee5175f010800496182398c",
+                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/d544c06b06c6044abe42d756a1c37e345cea79ea",
+                "reference": "d544c06b06c6044abe42d756a1c37e345cea79ea",
                 "shasum": ""
             },
             "require": {
+                "acacha/user": "~0.1",
+                "creativeorange/gravatar": "~1.0",
                 "illuminate/console": "~5.0",
                 "illuminate/support": "~5.0",
                 "php": ">=5.4.0"
@@ -57,7 +59,7 @@
                 "template",
                 "theme"
             ],
-            "time": "2016-09-05 09:30:23"
+            "time": "2016-09-14 11:40:35"
         },
         {
             "name": "acacha/profile",
@@ -119,6 +121,60 @@
                 "acacha",
                 "profile"
             ]
+        },
+        {
+            "name": "acacha/user",
+            "version": "0.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acacha/user.git",
+                "reference": "198a3f9b5a61a17438cd39947550d3591cfa1ec2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acacha/user/zipball/198a3f9b5a61a17438cd39947550d3591cfa1ec2",
+                "reference": "198a3f9b5a61a17438cd39947550d3591cfa1ec2",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.3",
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Acacha\\User\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "https://github.com/acacha",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A boosted User for Laravel",
+            "homepage": "https://github.com/acacha/user",
+            "keywords": [
+                "acacha",
+                "user"
+            ],
+            "time": "2016-09-13 11:59:21"
         },
         {
             "name": "barryvdh/laravel-debugbar",
@@ -344,6 +400,50 @@
             "time": "2015-11-09 22:51:51"
         },
         {
+            "name": "creativeorange/gravatar",
+            "version": "1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/creativeorange/gravatar.git",
+                "reference": "06cfcd2754fe0678298da1d244ab17231368d291"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/creativeorange/gravatar/zipball/06cfcd2754fe0678298da1d244ab17231368d291",
+                "reference": "06cfcd2754fe0678298da1d244ab17231368d291",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Creativeorange\\Gravatar\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jaco Tijssen",
+                    "email": "jaco@creativeorange.nl",
+                    "homepage": "https://www.creativeorange.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel 5.0, 5.1, 5.2 and 5.3 gravatar package for retrieving gravatar image URLs or checking the existance of an image.",
+            "keywords": [
+                "avatar",
+                "gravatar",
+                "laravel"
+            ],
+            "time": "2016-07-27 16:49:05"
+        },
+        {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
             "source": {
@@ -449,7 +549,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/sergi/Code/ebre-escool/ebre-escool-settings",
-                "reference": "83be4fa9bb4aee50319f99a574d813b18ed2eedd",
+                "reference": "e06841edf548c9fdfc6c1398f3d63fdda2189140",
                 "shasum": null
             },
             "require": {
@@ -650,16 +750,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.3.8",
+            "version": "v5.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "99c74afc0b99e1af1984cb55dc242ab28a0e496b"
+                "reference": "f6fbb481672f8dc4bc6882d5d654bbfa3588c8ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/99c74afc0b99e1af1984cb55dc242ab28a0e496b",
-                "reference": "99c74afc0b99e1af1984cb55dc242ab28a0e496b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f6fbb481672f8dc4bc6882d5d654bbfa3588c8ec",
+                "reference": "f6fbb481672f8dc4bc6882d5d654bbfa3588c8ec",
                 "shasum": ""
             },
             "require": {
@@ -773,7 +873,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-09-09 16:33:59"
+            "time": "2016-09-12 14:08:29"
         },
         {
             "name": "league/flysystem",
@@ -2531,16 +2631,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "da8529775f14f4fdae33f916eb0cf65f6afbddbc"
+                "reference": "94e5ca3e90aa5b34663780393e10914f7438f991"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/da8529775f14f4fdae33f916eb0cf65f6afbddbc",
-                "reference": "da8529775f14f4fdae33f916eb0cf65f6afbddbc",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/94e5ca3e90aa5b34663780393e10914f7438f991",
+                "reference": "94e5ca3e90aa5b34663780393e10914f7438f991",
                 "shasum": ""
             },
             "require": {
@@ -2569,7 +2669,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2016-09-06 16:07:05"
+            "time": "2016-09-07 15:34:10"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -3885,6 +3985,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "acacha/admin-lte-template-laravel": 20,
         "ebre-escool/settings": 20,
         "acacha/profile": 20
     },
