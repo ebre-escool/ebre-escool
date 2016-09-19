@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "153a30ee10686ac7db0dd6a1037f0c14",
-    "content-hash": "aa31980796ab543120c5afeb80b91b7c",
+    "hash": "073a6486b7d894d05cbd5266dce79e05",
+    "content-hash": "37b7c818d8f9893916fb2c53f63bcc46",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/acacha/adminlte-laravel.git",
-                "reference": "255e33e1e524c400b5aff52343c556ef3e9b17a5"
+                "reference": "2321961f3ee6ad6de1c5a8306fe4daf5075d5ff0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/255e33e1e524c400b5aff52343c556ef3e9b17a5",
-                "reference": "255e33e1e524c400b5aff52343c556ef3e9b17a5",
+                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/2321961f3ee6ad6de1c5a8306fe4daf5075d5ff0",
+                "reference": "2321961f3ee6ad6de1c5a8306fe4daf5075d5ff0",
                 "shasum": ""
             },
             "require": {
@@ -60,7 +60,61 @@
                 "template",
                 "theme"
             ],
-            "time": "2016-09-17 15:01:55"
+            "time": "2016-09-19 09:32:49"
+        },
+        {
+            "name": "acacha/contact",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acacha/contact.git",
+                "reference": "7e71da7bae4bfb36b0e2fe4668330e024f552d95"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acacha/contact/zipball/7e71da7bae4bfb36b0e2fe4668330e024f552d95",
+                "reference": "7e71da7bae4bfb36b0e2fe4668330e024f552d95",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^5.3",
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Acacha\\Contact\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergi Tur Badenas",
+                    "email": "sergiturbadenas@gmail.com",
+                    "homepage": "http://acacha.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Contacts support for Laravel",
+            "homepage": "https://github.com/acacha/contact",
+            "keywords": [
+                "acacha",
+                "contact"
+            ],
+            "time": "2016-09-19 15:31:19"
         },
         {
             "name": "acacha/profile",
@@ -68,10 +122,11 @@
             "dist": {
                 "type": "path",
                 "url": "/home/sergi/Code/acacha/profile",
-                "reference": "fad52242b41e51544cb66bbfae8f19fb12121798",
+                "reference": "98c15ce8752e3baba0b0802c1ee21a89e723b351",
                 "shasum": null
             },
             "require": {
+                "acacha/contact": "dev-master",
                 "illuminate/console": "~5.0",
                 "illuminate/support": "~5.0",
                 "php": "~5.6|~7.0"
@@ -1290,22 +1345,30 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+                "reference": "5277094ed527a1c4477177d102fe4c53551953e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
-                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/5277094ed527a1c4477177d102fe4c53551953e0",
+                "reference": "5277094ed527a1c4477177d102fe4c53551953e0",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.3.0"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
-                "psr-0": {
-                    "Psr\\Log\\": ""
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1319,12 +1382,13 @@
                 }
             ],
             "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
             "keywords": [
                 "log",
                 "psr",
                 "psr-3"
             ],
-            "time": "2012-12-21 11:40:51"
+            "time": "2016-09-19 16:02:08"
         },
         {
             "name": "psy/psysh",
@@ -3988,7 +4052,8 @@
     "stability-flags": {
         "acacha/admin-lte-template-laravel": 20,
         "ebre-escool/settings": 20,
-        "acacha/profile": 20
+        "acacha/profile": 20,
+        "acacha/contact": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

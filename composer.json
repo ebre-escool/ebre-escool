@@ -11,7 +11,8 @@
         "barryvdh/laravel-ide-helper": "^2.2",
         "barryvdh/laravel-debugbar": "^2.2",
         "ebre-escool/settings": "dev-master",
-        "acacha/profile": "dev-master"
+        "acacha/profile": "dev-master",
+        "acacha/contact": "@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
