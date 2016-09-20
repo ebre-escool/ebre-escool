@@ -65,16 +65,11 @@
         {
             "name": "acacha/contact",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/acacha/contact.git",
-                "reference": "7e71da7bae4bfb36b0e2fe4668330e024f552d95"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/acacha/contact/zipball/7e71da7bae4bfb36b0e2fe4668330e024f552d95",
-                "reference": "7e71da7bae4bfb36b0e2fe4668330e024f552d95",
-                "shasum": ""
+                "type": "path",
+                "url": "/home/sergi/Code/acacha/contact",
+                "reference": "f083984d0f03e0e93f5e2bc5e73ddccaee6af587",
+                "shasum": null
             },
             "require": {
                 "illuminate/database": "^5.3",
@@ -96,7 +91,19 @@
                     "Acacha\\Contact\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Acacha\\Contact\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
+                ],
+                "format": [
+                    "phpcbf --standard=psr2 src/"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -113,8 +120,7 @@
             "keywords": [
                 "acacha",
                 "contact"
-            ],
-            "time": "2016-09-19 15:31:19"
+            ]
         },
         {
             "name": "acacha/profile",
