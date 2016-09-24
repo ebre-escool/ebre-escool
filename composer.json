@@ -12,7 +12,8 @@
         "barryvdh/laravel-debugbar": "^2.2",
         "ebre-escool/settings": "dev-master",
         "acacha/profile": "dev-master",
-        "acacha/contact": "@dev"
+        "acacha/contact": "@dev",
+        "laravel/passport": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
