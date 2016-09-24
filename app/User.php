@@ -5,10 +5,11 @@ namespace App;
 use Acacha\Contact\Traits\Contactable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use Notifiable, Contactable;
+    use Notifiable, Contactable, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.

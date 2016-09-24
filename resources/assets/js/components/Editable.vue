@@ -14,7 +14,13 @@
 <script>
     export default {
         ready() {
-            console.log('Editable Component ready.')
+            console.log('Editable Component is ready!');
+            this.$http.get('/api/user')
+                    .then(response => {
+                    console.log('Resposta');
+                    console.log(response.data);
+            });
+            console.log('PROVA!');
         }
     }
 </script>

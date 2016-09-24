@@ -13,7 +13,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/sergi/Code/AdminLTE/acacha/adminlte-laravel",
-                "reference": null,
+                "reference": "d7f1a5c8ac4be45fab14001f109cf39b5210b5d3",
                 "shasum": null
             },
             "require": {
@@ -66,7 +66,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/sergi/Code/acacha/contact",
-                "reference": null,
+                "reference": "a3d6238ae98ea365b5f860eac6189ace8e2311fd",
                 "shasum": null
             },
             "require": {
@@ -126,7 +126,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/sergi/Code/acacha/profile",
-                "reference": null,
+                "reference": "b346ba75f555a39beb525d0f7ae1ec2cbf250ff0",
                 "shasum": null
             },
             "require": {
@@ -609,7 +609,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/sergi/Code/ebre-escool/ebre-escool-settings",
-                "reference": null,
+                "reference": "e06841edf548c9fdfc6c1398f3d63fdda2189140",
                 "shasum": null
             },
             "require": {
