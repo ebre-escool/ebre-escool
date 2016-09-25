@@ -10,26 +10,27 @@
 
 <template>
     <div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <span>
-                        OAuth Clients
-                    </span>
 
+        <div class="box box-default box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">OAuth Clients</h3>
+
+                <div class="box-tools pull-right">
                     <a class="action-link" @click="showCreateClientForm">
                         Create New Client
                     </a>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                 </div>
             </div>
 
-            <div class="panel-body">
+            <div class="box-body">
                 <!-- Current Clients -->
                 <p class="m-b-none" v-if="clients.length === 0">
                     You have not created any OAuth clients.
                 </p>
 
-                <table class="table table-borderless m-b-none" v-if="clients.length > 0">
+                <table class="table m-b-none" v-if="clients.length > 0">
                     <thead>
                         <tr>
                             <th>Client ID</th>

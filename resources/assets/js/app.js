@@ -35,3 +35,6 @@ Vue.component(
 const app = new Vue({
     el: 'body'
 });
+
+console.log('Are you the 6 fingered man?');
+toastr.info('Are you the 6 fingered man?');
