@@ -47,7 +47,7 @@
                     console.log(response.data);
             }, response => {
                     console.log('Error!');
-                    toastr.info('Are you the 6 fingered man?')
+//                    toastr.info('Are you the 6 fingered man?')
             });
             console.log('HEY!');
         },
