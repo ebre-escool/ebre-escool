@@ -16,6 +16,7 @@ require('./bootstrap');
 Vue.component('example', require('./components/Example.vue'));
 
 Vue.component('editable', require('./components/Editable.vue'));
+Vue.component('editable-field', require('./components/EditableField.vue'));
 
 Vue.component(
     'passport-clients',
