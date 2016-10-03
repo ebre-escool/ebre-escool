@@ -1,5 +1,5 @@
 <template>
-    <div id="editable_table_{{ table }}"><slot></slot></div>
+    <div :id="'editable_table_' + table "><slot></slot></div>
 </template>
 <script>
     export default {

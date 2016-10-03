@@ -20,4 +20,15 @@ class EditableByTableRepository implements EditableRepository {
     {
         // TODO: Implement save() method.
     }
+
+    /**
+     * Refresh/get current database value
+     *
+     * @param array $input
+     * @return mixed
+     */
+    public function refresh(array $input)
+    {
+        // TODO: Implement refresh() method.
+    }
 }

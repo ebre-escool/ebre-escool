@@ -1,14 +1,18 @@
 <template>
-    <div id="editable_field_{{ realfieldname }}">
-        <div>Content: {{ content }}</div>
-        <div>Field: {{ field | json }}</div>
-        <div>Field Name: {{ fieldname }}</div>
-        <div>Table Name: {{ tablename }}</div>
-        <div>Field Id : {{ tableid }}</div>
-        <div>Model name : {{ modelname }}</div>
+    <div :id="'editable_field_' + fieldname">
+        <!--<div>Content: {{ content }}</div>-->
+        <!--<div>Field: {{ field | json }}</div>-->
+        <!--<div>Field Name: {{ fieldname }}</div>-->
+        <!--<div>Table Name: {{ tablename }}</div>-->
+        <!--<div>Field Id : {{ tableid }}</div>-->
+        <!--<div>Model name : {{ modelname }}</div>-->
+        <!--<div>Refresh : {{ refresh }}</div>-->
+        <!--<div>Editing : {{ editing }}</div>-->
+
         <label class="control-label" v-if="!editing" @dblclick="toogleEditing" id="label">
             {{ content }}
             <i class="fa fa-edit" style="color: green;" v-if="!editing" @click="toogleEditing"></i>
+            <i class="fa fa-refresh" style="color: green;" v-if="refresh" @click="refreshContent"></i>
         </label>
         <div class="input-group" v-if="editing">
             <input v-focus type="text" class="form-control" v-model="content"
@@ -39,8 +43,7 @@
          */
         data() {
             return {
-                editing: false,
-                content: "",
+                editing: false
             };
         },
 
@@ -67,6 +70,14 @@
                 type: Number,
                 default: null
             },
+            'content'  : {
+                type: String,
+                default: ""
+            },
+            'refresh'  : {
+                type: Boolean,
+                default: false
+            },
         },
 
         computed: {
@@ -78,6 +89,7 @@
                 if (this.field.name.trim()) {
                     return this.field.name;
                 }
+                throw "Impossible to obtain fieldname. Use name or field prop to set field name";
             },
 
             modelname: function () {
@@ -101,8 +113,9 @@
         },
 
         ready() {
-            console.log('Ready!');
-            this.content = this.getContent();
+            if ( ! this.content.trim()) {
+                this.content = this.getContent();
+            }
         },
 
         directives: {
@@ -118,11 +131,23 @@
                 this.editing = !this.editing;
             },
 
+            refreshContent() {
+                //TODO: SHOW REFRESH CHANGING ICON to spinning action
+                console.log("REFRESH!!!!!!!!");
+                this.$http.post('api/editable/refresh',this.prepareRefreshFormData())
+                    .then(response => {
+                        console.log(response.data);
+                    }, response => {
+                        toastr.info('Error refreshing! Error ' + response.status + ' ' + response.statusText);
+                    });
+                //TODO: stop spinning!
+            },
+
             /**
              * Save change
              */
             save() {
-                this.$http.post('api/editable/save',this.prepareFormData())
+                this.$http.post('api/editable/save',this.prepareSaveFormData())
                     .then(response => {
                         console.log(response.data);
                 }, response => {
@@ -132,9 +157,9 @@
             },
 
             /**
-             * Prepare form data
+             * Prepare Common form data
              */
-            prepareFormData() {
+            prepareCommonFormData() {
                 let formData = new FormData();
                 formData.append('content', this.content);
                 formData.append('fieldname', this.fieldname);
@@ -145,6 +170,22 @@
                     formData.append('model', this.modelname);
                 }
                 formData.append('tableid', this.tableid);
+                return formData;
+            },
+
+            /**
+             * Prepare refresh form data
+             */
+            prepareRefreshFormData() {
+                return this.prepareCommonFormData();
+            },
+
+            /**
+             * Prepare Save form data
+             */
+            prepareSaveFormData() {
+                let formData = this.prepareCommonFormData();
+                formData.append('content', this.content);
                 return formData;
             },
 
@@ -168,21 +209,18 @@
 
         events: {
             'set-table': function (table) {
-                console.log('set-table called!');
                 if (!this.table.trim()) {
                     this.table = table;
                 }
             },
 
             'set-id': function (id) {
-                console.log('set-id called!');
                 if (this.id == null) {
                     this.id = id;
                 }
             },
 
             'set-modelClass': function (model) {
-                console.log('set-modelClass called!');
                 if (!this.model.trim()) {
                     this.model = model;
                 }

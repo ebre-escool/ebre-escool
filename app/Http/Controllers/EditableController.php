@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EditableRefreshPost;
 use App\Http\Requests\EditableSavePost;
 use App\Repositories\Contracts\EditableRepository;
 use DB;
@@ -36,6 +37,14 @@ class EditableController extends Controller
     public function save(EditableSavePost $request)
     {
         $this->repo->save($request->input());
+    }
+
+    /**
+     * @param EditableSavePost $request
+     */
+    public function refresh(EditableRefreshPost $request)
+    {
+        $this->repo->refresh($request->input());
     }
 
 

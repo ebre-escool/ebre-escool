@@ -9,7 +9,7 @@ use Illuminate\Foundation\Http\FormRequest;
  *
  * @package App\Http\Requests
  */
-class EditableSavePost extends FormRequest
+class EditableRefreshPost extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -29,7 +29,6 @@ class EditableSavePost extends FormRequest
     public function rules()
     {
         return [
-            'content'   => 'required',
             'fieldname' => 'required',
             'tableid'   => 'required',
             'tablename' => 'required_without:model',
